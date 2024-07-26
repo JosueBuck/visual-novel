@@ -13,21 +13,21 @@ In the end, the fate of Yamato is in Hiroshi’s hands. With multiple endings ba
 Embark on this epic quest and discover whether light will win over shadow in this timeless tale of courage, love, and sacrifice.
 
 ## Controls
-S: Save
-L: Load
-R: Restart
-I: Inventory
-H: Help
-Q: Quests
-M: Menu
+- S: Save
+- L: Load
+- R: Restart
+- I: Inventory
+- H: Help
+- Q: Quests
+- M: Menu
 
 
 ## Links
 
-[Visual Novel](https://josuebuck.github.io/visual-novel/fragments-of-eternity-the-samurais-legacy/)
-[Concept](https://github.com/JosueBuck/visual-novel/blob/main/concept/visual-novel-concept.pdf)
-[Code](https://github.com/JosueBuck/visual-novel/tree/main/fragments-of-eternity-the-samurais-legacy)
-[Zip](https://drive.google.com/drive/folders/1hWl2l7p_E1LlLtY0xRqodooNL7BYzKFR?usp=drive_link)
+- [Visual Novel](https://josuebuck.github.io/visual-novel/fragments-of-eternity-the-samurais-legacy/)
+- [Concept](https://github.com/JosueBuck/visual-novel/blob/main/concept/visual-novel-concept.pdf)
+- [Code](https://github.com/JosueBuck/visual-novel/tree/main/fragments-of-eternity-the-samurais-legacy)
+- [Zip](https://drive.google.com/drive/folders/1hWl2l7p_E1LlLtY0xRqodooNL7BYzKFR?usp=drive_link)
 
 
 
