@@ -135,7 +135,7 @@ var Template;
                 default: "./Images/Characters/king_akuma.png",
             },
             health: 100,
-            defense: 0.7
+            defense: 0.6
         },
         masterKazuki: {
             name: "Master Kazuki",
@@ -196,7 +196,7 @@ var Template;
                 default: "./Images/Characters/guardian_spirit.png",
             },
             health: 100,
-            defense: 0.6
+            defense: 0.5
         }
     };
 })(Template || (Template = {}));
