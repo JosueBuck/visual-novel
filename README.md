@@ -25,7 +25,7 @@ M: Menu
 ## Links
 
 [Visual Novel](https://josuebuck.github.io/visual-novel/fragments-of-eternity-the-samurais-legacy/)
-[Concept]()
+[Concept](https://github.com/JosueBuck/visual-novel/blob/main/concept/visual-novel-concept.pdf)
 [Code](https://github.com/JosueBuck/visual-novel/tree/main/fragments-of-eternity-the-samurais-legacy)
 [Zip](https://drive.google.com/drive/folders/1hWl2l7p_E1LlLtY0xRqodooNL7BYzKFR?usp=drive_link)
 
