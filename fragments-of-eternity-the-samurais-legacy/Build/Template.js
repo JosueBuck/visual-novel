@@ -294,7 +294,7 @@ var Template;
             image: "./Images/Items/health_potion.png",
             static: false, // Can be consumed
             handler: () => {
-                let health = Template.dataForSave.health + 40;
+                let health = Template.dataForSave.health + 50;
                 health > 100 ? 100 : health;
                 Template.dataForSave.health = health;
                 return;

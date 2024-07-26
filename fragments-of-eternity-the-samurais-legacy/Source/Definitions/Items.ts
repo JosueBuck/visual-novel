@@ -43,7 +43,7 @@ namespace Template {
             image: "./Images/Items/health_potion.png",
             static: false, // Can be consumed
             handler: () => {
-                let health = dataForSave.health + 40;
+                let health = dataForSave.health + 50;
                 health > 100 ? 100 : health;
                 dataForSave.health = health;
                 return
