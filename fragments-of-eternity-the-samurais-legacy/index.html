@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="Fudge/FudgeCore.js"></script>
+  <script src="FudgeStory/FudgeStory.js"></script>
+  <script src="./Build/Template.js"></script>
+  <title>Fragments of Eternity: The Samurai's Legacy</title>
+<!--   <splash src="Images/Splash.png" /> -->
+</head>
+
+<body>
+  <scene>
+
+    <dialog type="splash" open>
+      <div class="title-container">
+        <p>
+          Fragments of Eternity: The Samurai's Legacy
+        </p>
+      </div>
+      <div class="fudge-container">
+        <p>This visual novel was made with:</p>
+        <img id="FudgeStoryLogo" theme="light" /> <!-- use "light" or "dark" -->
+      </div>
+    </dialog>
+
+    <canvas></canvas>
+
+
+    <speech>
+      <name><!-- The name of the character speaking --></name>
+      <content><!-- The text the character says --></content>
+    </speech>
+
+    <dialog type="inventory">
+      <button>Close</button>
+      <ul>
+        <li>
+          <p>Name</p>
+          <p>Amount</p>
+          <p>Description</p>
+          <p></p>
+        </li>
+        <!-- The items in the player's inventory -->
+      </ul>
+    </dialog>
+    
+    <dialog id="fight-ui">
+      <meter id="fight-value-display" name="fight-value-display" value="100" max="100"></meter>
+      <button id="fight-action-button"></button>
+    </dialog>
+
+    <div type="player-meter-container" id="player-meter-container" class="player-meter-container">
+      <meter disabled name="health" id="health" type="health" value="100" max="100"></meter>
+      <meter disabled name="mana" id="mana" type="mana" value="0" max="100"></meter>
+    </div>
+
+    <div id="enemy-meter-container" class="enemy-meter-container">
+      <meter disabled name="enemy-health" id="enemy-health" type="enemy-health" value="100" max="100"></meter>
+    </div>
+
+    <dialog type="text">
+      <!-- The content of a page of text for reading -->
+    </dialog>
+
+  </scene>
+</body>
+
+</html>
