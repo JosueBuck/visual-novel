@@ -922,7 +922,7 @@ var Template;
                     return Template.Location.EndingTwo;
                 }
                 else if (Template.dataForSave.quests.theLight.questState === 'completed') {
-                    await Template.ƒS.Character.show(Template.characters.theLight, Template.characters.theLight.pose.default, Template.ƒS.positionPercent(70, 110));
+                    await Template.ƒS.Character.show(Template.characters.theLight, Template.characters.theLight.pose.default, Template.ƒS.positionPercent(50, 110));
                     await Template.ƒS.update(2);
                     await Template.ƒS.Speech.tell(Template.characters.theLight, `${Template.dataForSave.playerName}, Aiko. Your love is truly pure.`);
                     await Template.ƒS.Speech.tell(Template.characters.theLight, "You have proven yourself worthy.");
@@ -933,6 +933,7 @@ var Template;
                     await Template.ƒS.Speech.tell(Template.characters.player, "I am ready.");
                     await Template.ƒS.Speech.tell(Template.characters.aiko, "Lets end this.");
                     await Template.ƒS.Speech.tell(Template.characters.theLight, "Close your eyes.");
+                    Template.ƒS.Character.hideAll();
                     Template.ƒS.Sound.fade(Template.audio.ambience.darkFortress, 0, 4);
                     return Template.Location.EndingFive;
                 }

@@ -169,7 +169,7 @@ namespace Template {
                     ƒS.Sound.fade(audio.ambience.darkFortress, 0, 4);
                     return Location.EndingTwo;
                 } else if (dataForSave.quests.theLight.questState === 'completed') {
-                    await ƒS.Character.show(characters.theLight, characters.theLight.pose.default, ƒS.positionPercent(70, 110));
+                    await ƒS.Character.show(characters.theLight, characters.theLight.pose.default, ƒS.positionPercent(50, 110));
                     await ƒS.update(2);
                     await ƒS.Speech.tell(characters.theLight, `${dataForSave.playerName}, Aiko. Your love is truly pure.`);
                     await ƒS.Speech.tell(characters.theLight, "You have proven yourself worthy.");
@@ -180,6 +180,7 @@ namespace Template {
                     await ƒS.Speech.tell(characters.player, "I am ready.");
                     await ƒS.Speech.tell(characters.aiko, "Lets end this.");
                     await ƒS.Speech.tell(characters.theLight, "Close your eyes.");
+                    ƒS.Character.hideAll();
                     ƒS.Sound.fade(audio.ambience.darkFortress, 0, 4);
                     return Location.EndingFive;
 
