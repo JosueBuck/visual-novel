@@ -1354,16 +1354,15 @@ var Template;
         Template.ƒS.Sound.play(Template.audio.ambience.hiddenShrine, 0.1, true);
         await Template.ƒS.Location.show(Template.locations.hiddenShrine);
         await Template.ƒS.update(Template.transitions.pix1.duration, Template.transitions.pix1.alpha, Template.transitions.pix1.edge);
+        await Template.ƒS.Character.animate(Template.characters.player, Template.characters.player.pose.default, Template.slideAnimation({
+            _xStart: -50,
+            _xEnd: 0,
+            _yStart: 110,
+            _yEnd: 110,
+            _duration: 5
+        }));
         if (!Template.dataForSave.visitedScenes.includes(Template.Location.HiddenShrine)) {
             Template.dataForSave.visitedScenes.push(Template.Location.HiddenShrine);
-            await Template.ƒS.Character.show(Template.characters.player, Template.characters.player.pose.default, Template.ƒS.positionPercent(0, 110));
-            await Template.ƒS.Character.animate(Template.characters.player, Template.characters.player.pose.default, Template.slideAnimation({
-                _xStart: -50,
-                _xEnd: 0,
-                _yStart: 110,
-                _yEnd: 110,
-                _duration: 5
-            }));
             await Template.ƒS.Speech.tell(Template.characters.player, "So this must be the hidden shrine. I should be careful.");
             await Template.ƒS.Speech.tell(Template.characters.player, "All the stories I have heard about this place. I must be prepared for anything.");
             await Template.ƒS.Character.show(Template.characters.guardianSpirit, Template.characters.guardianSpirit.pose.default, Template.ƒS.positionPercent(80, 110));
@@ -1382,6 +1381,8 @@ var Template;
             await Template.ƒS.Speech.tell("", `Quest: ${Template.quests.guardianSpirit.name} was added.`);
         }
         if (Template.ƒS.Inventory.getAmount(Template.items.celestialOrb) === 0) {
+            await Template.ƒS.Character.show(Template.characters.guardianSpirit, Template.characters.guardianSpirit.pose.default, Template.ƒS.positionPercent(80, 110));
+            await Template.ƒS.update(1);
             await Template.ƒS.Speech.tell(Template.characters.guardianSpirit, "Tell me, are you ready to prove your strength?");
             let guardianSpiritOptions = {
                 ready: "I am ready.",
@@ -1422,8 +1423,6 @@ var Template;
             }
         }
         else {
-            await Template.ƒS.Character.show(Template.characters.player, Template.characters.player.pose.default, Template.ƒS.positionPercent(0, 110));
-            await Template.ƒS.update(1);
             await Template.ƒS.Speech.tell(Template.characters.player, "I have already found the orb. I should continue my journey.");
         }
         Template.ƒS.Speech.hide();

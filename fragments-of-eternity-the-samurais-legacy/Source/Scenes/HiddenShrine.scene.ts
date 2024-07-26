@@ -9,17 +9,16 @@ namespace Template {
         
         await ƒS.Location.show(locations.hiddenShrine);
         await ƒS.update(transitions.pix1.duration, transitions.pix1.alpha, transitions.pix1.edge);
-
+        
+        await ƒS.Character.animate(characters.player, characters.player.pose.default, slideAnimation({
+            _xStart: -50,
+            _xEnd: 0,
+            _yStart: 110,
+            _yEnd: 110,
+            _duration: 5
+        }));
         if (!dataForSave.visitedScenes.includes(Location.HiddenShrine)) {
             dataForSave.visitedScenes.push(Location.HiddenShrine);
-            await ƒS.Character.show(characters.player, characters.player.pose.default, ƒS.positionPercent(0, 110));
-            await ƒS.Character.animate(characters.player, characters.player.pose.default, slideAnimation({
-                _xStart: -50,
-                _xEnd: 0,
-                _yStart: 110,
-                _yEnd: 110,
-                _duration: 5
-            }));
             await ƒS.Speech.tell(characters.player, "So this must be the hidden shrine. I should be careful.");
             await ƒS.Speech.tell(characters.player, "All the stories I have heard about this place. I must be prepared for anything.");
             await ƒS.Character.show(characters.guardianSpirit, characters.guardianSpirit.pose.default, ƒS.positionPercent(80, 110));
@@ -39,6 +38,8 @@ namespace Template {
         }    
 
         if (ƒS.Inventory.getAmount(items.celestialOrb) === 0) {
+            await ƒS.Character.show(characters.guardianSpirit, characters.guardianSpirit.pose.default, ƒS.positionPercent(80, 110));
+            await ƒS.update(1);
             await ƒS.Speech.tell(characters.guardianSpirit, "Tell me, are you ready to prove your strength?");  
 
             let guardianSpiritOptions = {
@@ -84,8 +85,6 @@ namespace Template {
                     break;
             }       
         } else {
-            await ƒS.Character.show(characters.player, characters.player.pose.default, ƒS.positionPercent(0, 110));
-            await ƒS.update(1);
             await ƒS.Speech.tell(characters.player, "I have already found the orb. I should continue my journey.");
         }
 
